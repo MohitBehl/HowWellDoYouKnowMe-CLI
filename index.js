@@ -110,11 +110,11 @@ function printScore(){
 function printTopPerformers(){
 
     console.log(" ---------------------------------------------- ");
-    console.log(chalk.cyanBright(chalk.bold("        HALL OF FAME")))
-    hallOfFame.sort(function(a,b){return b.score-a.score});
     if(hallOfFame.length > 0 && score > hallOfFame[0].score){
         console.log(chalk.blueBright("Congratulations you have beaten the high score !!! "));
     }
+    console.log(chalk.cyanBright(chalk.bold("        HALL OF FAME")))
+    hallOfFame.sort(function(a,b){return b.score-a.score});
     console.table(hallOfFame);
 }
 
