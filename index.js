@@ -19,6 +19,18 @@ var questions = [
     }
 ]
 
+// Hall of Fame
+var hallOfFame = [
+    {
+        name : "alex",
+        score : 2
+    },
+    {
+        name : "jerry",
+        score : 3
+    }
+]
+
 // var readLineSync = require("readline-sync"); .... was not able to use it because of type:module in the package.json
 import readLineSync from "readline-sync";
 import chalk from 'chalk';
@@ -57,6 +69,7 @@ if(res){
 }
 console.clear();
 goodBye();
+printTopPerformers();
 
 // HELPER FUNCTIONS
 // greetings
@@ -87,8 +100,20 @@ function goodBye(){
 }
 
 function printScore(){
+    console.log(chalk.yellowBright("Player Name : "+userName));
     console.log("Correct : "+chalk.greenBright(countCorrect)+"\nIncorrect : "+chalk.redBright(countIncorrect));
     console.log("Total Questions : 5 \n"+chalk.blackBright(chalk.bold(chalk.underline("Score : "+score))));
+    console.log("\n"+chalk.redBright("NOTE : Share your screenshort with the CLI-app developer to get name entered in Top-Performers"));
 }
 
+function printTopPerformers(){
+
+    console.log(" ---------------------------------------------- ");
+    console.log(chalk.cyanBright(chalk.bold("        HALL OF FAME")))
+    hallOfFame.sort(function(a,b){return b.score-a.score});
+    if(hallOfFame.length > 0 && score > hallOfFame[0].score){
+        console.log(chalk.blueBright("Congratulations you have beaten the high score !!! "));
+    }
+    console.table(hallOfFame);
+}
 
