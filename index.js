@@ -31,9 +31,10 @@ var hallOfFame = [
     }
 ]
 
-// var readLineSync = require("readline-sync"); .... was not able to use it because of type:module in the package.json
-import readLineSync from "readline-sync";
-import chalk from 'chalk';
+var readLineSync = require("readline-sync");
+var chalk = require("chalk");
+
+
 
 // MAIN LOGIC
 var userName = readLineSync.question("Whats your name  ? ");
