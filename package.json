@@ -1,0 +1,22 @@
+{
+  "name": "howwelldoyouknowme-cli",
+  "version": "1.0.0",
+  "description": "This is a JS-based CLI app. \r Task of the app is to create a quiz based environment with the scoring sys.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohitBehl/HowWellDoYouKnowMe-CLI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohitBehl/HowWellDoYouKnowMe-CLI/issues"
+  },
+  "homepage": "https://github.com/MohitBehl/HowWellDoYouKnowMe-CLI#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
