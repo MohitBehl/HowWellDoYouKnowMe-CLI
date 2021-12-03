@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/MohitBehl/HowWellDoYouKnowMe-CLI#readme",
   "dependencies": {
+    "chalk": "^5.0.0",
     "readline-sync": "^1.4.10"
-  }
+  },
+  "type": "module"
 }
